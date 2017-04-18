@@ -24,6 +24,11 @@ Prerequisites
     This server does not have to be dedicated to this function - any server 
     running IIS and joined to the same domain as the DNS servers should work.
     
+- Optional DB to track updates
+    The c:\inetpub\wwwroot\dnsapi\v1\index_tracked.php contains logic that will
+    save the output of every action to a tracking DB.  It was designed for use
+    with Azure SQL, but can be adapted to any DB PHP has a connector for.
+    
 Setting Up IIS
   This document assumes you are familiar with the basics of setting up IIS for
   SSL and installing PHP.
