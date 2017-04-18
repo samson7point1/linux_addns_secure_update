@@ -1,4 +1,5 @@
-USE [AutomationDB]
+/*This script is designed to create a table in an Azure SQL DB*/
+USE [ACMEAutomation]
 GO
 
 /****** Object:  Table [dbo].[dnsapi] ******/
