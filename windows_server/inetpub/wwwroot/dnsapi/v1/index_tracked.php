@@ -163,7 +163,7 @@ if(json_last_error() !== JSON_ERROR_NONE) {
 }
 
 // Prepare the SQL statement to record this into the automation DB
-$stmt = $db->prepare("INSERT INTO ps1api(date,[user],ip,action,request,response,command,runtime) VALUES(getdate(),:user,:ip,:action,:request,:response,:command,:runtime)");
+$stmt = $db->prepare("INSERT INTO dnsapi(date,[user],ip,action,request,response,command,runtime) VALUES(getdate(),:user,:ip,:action,:request,:response,:command,:runtime)");
 $stmt->bindValue(':user'	,$_SERVER["REMOTE_USER"],PDO::PARAM_STR);
 $stmt->bindValue(':ip'		,$_SERVER["REMOTE_ADDR"],PDO::PARAM_STR);
 $stmt->bindValue(':action'	,$ACTION				,PDO::PARAM_STR);
